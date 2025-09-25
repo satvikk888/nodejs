@@ -1,0 +1,75 @@
+{
+  "info": {
+    "name": "Cards API",
+    "_postman_id": "12345-67890",
+    "description": "REST API for Playing Card Collection using Express.js",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get all cards",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/cards",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["cards"]
+        }
+      }
+    },
+    {
+      "name": "Get card by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/cards/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["cards", "1"]
+        }
+      }
+    },
+    {
+      "name": "Add new card",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"suit\": \"Clubs\",\n    \"value\": \"Jack\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/cards",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["cards"]
+        }
+      }
+    },
+    {
+      "name": "Delete card by ID",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/cards/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["cards", "1"]
+        }
+      }
+    }
+  ]
+}
