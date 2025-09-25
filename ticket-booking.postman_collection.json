@@ -1,0 +1,66 @@
+{
+  "info": {
+    "name": "Ticket Booking API",
+    "_postman_id": "abcdef-12345",
+    "description": "Concurrent Ticket Booking System with Seat Locking and Confirmation",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get all seats",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/seats",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["seats"]
+        }
+      }
+    },
+    {
+      "name": "Lock seat 5",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/lock/5",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["lock", "5"]
+        }
+      }
+    },
+    {
+      "name": "Confirm seat 5",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/confirm/5",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["confirm", "5"]
+        }
+      }
+    },
+    {
+      "name": "Confirm seat 2 (without locking)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/confirm/2",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["confirm", "2"]
+        }
+      }
+    }
+  ]
+}
